@@ -7,3 +7,4 @@
 .springBeans
 /target/
 /target/
+/src/main/resources/application.properties
