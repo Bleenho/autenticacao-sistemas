@@ -7,7 +7,7 @@ import br.com.facilita.autenticacao.exception.LoginException;
 
 public interface UsuarioService {
 
-	LogarResponse cadastrarUsuario(CadastroUsuarioRequest cadastro);
+	Long cadastrarUsuario(CadastroUsuarioRequest cadastro);
 	
 	LogarResponse logar(LogarRequest logando) throws LoginException;
 }

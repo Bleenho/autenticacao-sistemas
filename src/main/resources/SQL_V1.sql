@@ -1,4 +1,5 @@
 INSERT INTO autenticacao.sistema VALUES (1, 'MARMITA-UAI-WEB');	
+INSERT INTO autenticacao.sistema VALUES (2, 'MARMITA-UAI-APP');	
 INSERT INTO autenticacao.perfil VALUES (1, 'ADM');
 INSERT INTO autenticacao.modulo VALUES (1, 'TELA_ITEM', 1);
 INSERT INTO autenticacao.modulo VALUES (2, 'TELA_TAMANHO_MARMITA', 1);

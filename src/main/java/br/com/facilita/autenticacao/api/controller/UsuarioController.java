@@ -31,8 +31,10 @@ public class UsuarioController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<DefaultResponse> save(@RequestBody CadastroUsuarioRequest usuario) {
-		return new ResponseEntity<>(DefaultResponse.builder().dado(service.cadastrarUsuario(usuario)).sucesso(true).build(), HttpStatus.CREATED);
+	public ResponseEntity<?> save(@RequestBody CadastroUsuarioRequest usuario) {
+		return ResponseEntity
+				.status(HttpStatus.CREATED)
+				.eTag(String.valueOf(service.cadastrarUsuario(usuario))).build();
 	}
 
 	@PostMapping( value ="/logar")

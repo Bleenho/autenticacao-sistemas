@@ -9,13 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CadastroUsuarioRequest {
+public class ModuleRegisterRequest {
 
-	private String nmUsuario;
+	private String describeModule;
 	
-	private String dsEmail;
-	
-	private String userName;
-	
-	private String password;
+	private Long idSistema;
 }

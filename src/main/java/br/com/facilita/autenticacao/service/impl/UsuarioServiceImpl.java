@@ -16,7 +16,6 @@ import br.com.facilita.autenticacao.api.response.PerfilResponse;
 import br.com.facilita.autenticacao.api.response.ResponseEnum;
 import br.com.facilita.autenticacao.converter.UsuarioConverter;
 import br.com.facilita.autenticacao.exception.LoginException;
-import br.com.facilita.autenticacao.model.ModuloPerfil;
 import br.com.facilita.autenticacao.model.Perfil;
 import br.com.facilita.autenticacao.model.Sistema;
 import br.com.facilita.autenticacao.model.SolicitacaoAcesso;
@@ -47,14 +46,14 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public LogarResponse cadastrarUsuario(CadastroUsuarioRequest cadastro) {
+	public Long cadastrarUsuario(CadastroUsuarioRequest cadastro) {
 		Usuario usuario = UsuarioConverter.cadastroUsuarioRequestToUsuario(cadastro);
 
 		usuario.setDsSenha(md5.cript(usuario.getDsSenha()));
 		usuario.setFlStatus("A");
 		usuario.setDtAlteracao(new Date());
 
-		return UsuarioConverter.usuarioToLogarResponse(usuarioRepository.save(usuario));
+		return usuarioRepository.save(usuario).getIdUsuario();
 	}
 
 	@Override
