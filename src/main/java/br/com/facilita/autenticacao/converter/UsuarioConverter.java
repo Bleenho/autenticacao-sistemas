@@ -2,6 +2,7 @@ package br.com.facilita.autenticacao.converter;
 
 import br.com.facilita.autenticacao.api.request.CadastroUsuarioRequest;
 import br.com.facilita.autenticacao.api.response.LogarResponse;
+import br.com.facilita.autenticacao.model.Perfil;
 import br.com.facilita.autenticacao.model.Usuario;
 import lombok.Builder;
 
@@ -16,6 +17,7 @@ public class UsuarioConverter {
 				.cdUsuario(cadastro.getUserName())
 				.dsSenha(cadastro.getPassword())
 				.dsEmail(cadastro.getDsEmail())
+				.perfil(Perfil.builder().idPerfil(cadastro.getIdPerfil()).build())
 				.build();
 	}
 	

@@ -18,7 +18,7 @@ import br.com.facilita.autenticacao.service.UsuarioService;
 import io.swagger.annotations.Api;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/users")
 @Api(tags = "Usuário",
 value = "API's de usuários")
 public class UsuarioController {

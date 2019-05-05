@@ -13,4 +13,6 @@ public interface ModuloPerfilRepository extends JpaRepository<ModuloPerfil, Long
 	
 	public List<ModuloPerfil> findDistinctModuloPerfilByPerfil(Perfil perfil);
 
+	public List<ModuloPerfil> findByModuloIdModuloAndPerfilIdPerfil(Long idModulo, Long idPerfil);
+
 }

@@ -1,5 +1,7 @@
 package br.com.facilita.autenticacao.api.request;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,15 +11,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CadastroUsuarioRequest {
+public class ModuleIntoPerfilRequest {
 
-	private String nmUsuario;
-	
-	private String dsEmail;
-	
-	private String userName;
-	
-	private String password;
-	
 	private Long idPerfil;
+	private List<Long> idsModulo;
+	private AcaoModuloPerfil acao;
+	
 }

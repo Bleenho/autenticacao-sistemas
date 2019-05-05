@@ -25,7 +25,6 @@ public class LoginRepository {
 			"		AND U.DS_SENHA = ? " +
 			"		AND M.CD_SISTEMA = ? LIMIT 1";
 
-
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired

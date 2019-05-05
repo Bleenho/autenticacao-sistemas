@@ -12,4 +12,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
 	List<Usuario> findByDsSenhaAndCdUsuario(String cript, String userName);
 
+	List<Usuario> findByCdUsuario(String userName);
+
 }
